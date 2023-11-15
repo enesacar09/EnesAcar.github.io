@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a herf="#">Home</a></li>
+                <li><a herf="#">Over mij</a></li>
+                <li><a herf="#">Protfolio</a></li>
+                <li><a herf="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+        <p>Software developer</p>
+        <h1>Hallo, ik ben <span>Enes</span></h1>
+        </div>
+    </div>
+</div>
+<!----------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">Over mij</h1>
+                <p>Mijn naam is Enes Acar, en ik ben momenteel ingeschreven voor de opleiding ICT Software Development op niveau 4 aan het ROC de Leijgraaf. Voordat ik aan deze opleiding begon, heb ik met succes de opleidingen ICT Medewerker Beheer op zowel niveau 2 als niveau 3 afgerond, waarvoor ik mijn diploma's heb behaald. Mijn achtergrond in ICT heeft me een solide basis gegeven in zowel beheer als softwareontwikkeling, en ik ben vastberaden om mijn vaardigheden verder te ontwikkelen en te verfijnen tijdens mijn huidige studie. De combinatie van deze opleidingen stelt me in staat om een brede kennis te verwerven en me te specialiseren in softwareontwikkeling op hoog niveau. Ik kijk ernaar uit om mijn passie voor ICT om te zetten in praktische toepassingen en mijn bijdrage te leveren aan de snel evoluerende wereld van informatietechnologie.</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opantab('skills')">Vaardigheden</p>
+                <p class="tab-links" onclick="opantab('experience')">Werkervaring</p>
+                <p class="tab-links" onclick="opantab('education')">Opleidingen</p>
+            </div>
+            <div class="tab-contents active-tab"id="skills">
+                <ul>
+                    <li><span>Java script</span></span></li>
+                    <li><span>PHP</span></li>
+                    <li><span>HTML</span></li>
+                    <li><span>CSS</span></li>
+                    <li><span>Unity</span></li>
+                </ul>
+               </div>
+               <div class="tab-contents"id="experience">
+                <ul>
+                    <li><span>2022 - hede </span></span><br> Medewerker bij 2contact</li>
+                    <li><span>2020 - 2021</span><br> Stage/Medewerker bij de Office center</li>
+                    <li><span>2018 - 2019</span><br> Stage bij FST computers</li>
+                    <li><span>2017 - 2019</span><br> Medewerker bij Florya Heesch</li>
+                    <li><span>2017 - 2018</span><br> Stage bij Total IT</li>
+                    <li><span>2016 - 2017</span><br> Stage bij PGK/Euronics</li>
+                </ul>
+               </div>
+           <div class="tab-contents"id="education">
+            <ul>
+                <li><span>2021 - hede </span></span><br> MBO software en development ICT Bol 4, ROC de  Leijgraaf, Oss</li>
+                <li><span>2020 - 2021</span><br> MBO medewerker beheer ICT Bol3, Roc de Leijgraaf, Oss (Diploma behaald)</li>
+                <li><span>2017 - 2019</span><br> MBO medewerker beheer ICT 2plus, Roc de Leijgraaf, Oss (Diploma behaald)</li>
+                <li><span>2013 - 2017</span><br> VMBO Opleiding Elektrotechniek, Basis, Het Hooghuis, Oss (Diploma behaald)</li>
+            </ul>
+           </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------Portfolio---------->
+<div id="Portfolio">
+    <div class="conrainer">
+     <h1 class="sub-tittle">Mijn Projecten</h1>
+     <div class="work-list">
+        <div class="work">
+            <img src="images/work1.png">
+            <div class="layer">
+                <h3>Project zeilschool de blauwe zeilen</h3>
+                <p>dit was het vorige project waar ik mee bezig was en dit is een foto toen die nog niet af was</p>
+            </div>
+        </div> <div class="work">
+            <img src="images/work2.jpg">
+            <div class="layer">
+                <h3>Nieuwe laptop</h3>
+                <p>omdat mijn vorige laptop kapot is kan ik niet bij mijn oude projecten komen</p>
+            </div>
+        </div> <div class="work">
+            <img src="images/word3.png">
+            <div class="layer">
+                <h3>Nieuwe laptop</h3>
+                <p>omdat mijn vorige laptop kapot is kan ik niet bij mijn oude projecten komen</p>
+            </div>
+        </div>
+     </div>
+    </div>
+</div>
+<!----------contact---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact</h1>
+            <p>enes.acar09@hotmail.com</p>
+            <p>0612473623</p>
+        </div>
+    </div>  
+    <a href="images/Enes cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opantab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+     }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+     }
+</script>
+
+</body>
+</html>
